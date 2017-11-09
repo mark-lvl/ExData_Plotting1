@@ -57,6 +57,7 @@ load_data <- function () {
 }
 
 draw <- function(dt) {
+    png("plot3.png", width = 480, height = 480)
     plot(dt$datetime, 
          dt$Sub_metering_1, 
          type = 'l', 
@@ -71,6 +72,5 @@ draw <- function(dt) {
            legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
     
     ## Save the plot in png file
-    dev.copy(png, file = "plot3.png")
     dev.off()
 }

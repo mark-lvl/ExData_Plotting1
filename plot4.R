@@ -57,6 +57,7 @@ load_data <- function () {
 }
 
 draw <- function(dt) {
+    png("plot4.png", width = 480, height = 480)
     par(mfrow = c(2,2))
     
     ## First plot
@@ -85,6 +86,5 @@ draw <- function(dt) {
     with(dt, plot(datetime, Global_reactive_power, type = 'l'))
     
     ## Save the plot in png file
-    dev.copy(png, file = "plot4.png")
     dev.off()
 }

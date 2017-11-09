@@ -57,6 +57,7 @@ load_data <- function () {
 }
 
 draw <- function(dt) {
+    png("plot2.png", width = 480, height = 480)
     plot(dt$datetime, 
          dt$Global_active_power, 
          type = 'l', 
@@ -64,6 +65,5 @@ draw <- function(dt) {
          xlab = "")
     
     ## Save the plot in png file
-    dev.copy(png, file = "plot2.png")
     dev.off()
 }
